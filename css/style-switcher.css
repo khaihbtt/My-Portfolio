@@ -6,7 +6,7 @@
     width: 200px;
     border: 1px solid var(--bg-black-50);
     background: var(--bg-black-100);
-    z-index: 10;
+    z-index: 101;
     border-radius: 5px;
     transform: all 0.3s ease;
     transform: translate(100%);

@@ -1,5 +1,42 @@
 // ===============toggle style switcher===
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 styleSwitcherToggle.addEventListener("click", () =>{
-    document.querySelect(".style-switcher").classList.toggle("open");
+    document.querySelector(".style-switcher").classList.toggle("open");
+})
+// hide style switcher on scroll
+ window.addEventListener("scroll", () =>{//khi quấn gọi hàm rỗng dưới
+    if(document.querySelector(".style-switcher").classList.contains("open"))//Kiểm tra xem phần tử có class .style-switcher có chứa class open hay không.
+        {
+            document.querySelector(".style-switcher").classList.remove("open");//class open sẽ bị xóa đi khỏi phần tử này bằng cách sử dụng .classList.remove("open")
+        }
+ })
+// ===============theme color===
+const alternateStyles = document.querySelectorAll (".alternate-style");
+function setActiveStyle(color)
+{
+    alternateStyles.forEach((style) => {
+        if (color === style.getAttribute("title"))
+        {
+            style.removeAttribute("disabled")
+        }
+        else {
+            style.setAttribute("disabled","true");
+        }
+    })
+}
+// ===============theme light or  dark===
+const dayNights = document.querySelector(".day-night");
+dayNights.addEventListener("click",(e) => {
+    dayNights.querySelector("i").classList.toggle("fa-sun");
+    dayNights.querySelector("i").classList.toggle("fa-moon");
+    documentbody.classList.toggle("dark");
+})
+window.addEventListener("load", () => {
+    if (document.body.classList.contains("dark"))
+    {
+        dayNights.querySelector("i").classList.add("fa-sun");
+    }
+    else {
+        dayNights.querySelector("i").classList.add("fa-moon");
+    }
 })
