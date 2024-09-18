@@ -25,18 +25,18 @@ function setActiveStyle(color)
     })
 }
 // ===============theme light or  dark===
-const dayNights = document.querySelector(".day-night");
-dayNights.addEventListener("click",(e) => {
-    dayNights.querySelector("i").classList.toggle("fa-sun");
-    dayNights.querySelector("i").classList.toggle("fa-moon");
-    documentbody.classList.toggle("dark");
+const dayNight = document.querySelector(".day-night");
+dayNight.addEventListener("click",() => {
+    dayNight.querySelector("i").classList.toggle("fa-sun");
+    dayNight.querySelector("i").classList.toggle("fa-moon");
+    document.body.classList.toggle("dark");
 })
 window.addEventListener("load", () => {
     if (document.body.classList.contains("dark"))
     {
-        dayNights.querySelector("i").classList.add("fa-sun");
+        dayNight.querySelector("i").classList.add("fa-sun");
     }
     else {
-        dayNights.querySelector("i").classList.add("fa-moon");
+        dayNight.querySelector("i").classList.add("fa-moon");
     }
 })

@@ -288,7 +288,7 @@ h3.my-profession {
     margin: auto;
     border-radius: 10px;
     height: 400px;
-    background: red;
+    background: var(--skin-color);
 }
 /* About */
 .about .about-content {
